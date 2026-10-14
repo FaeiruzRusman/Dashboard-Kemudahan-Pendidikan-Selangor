@@ -13,7 +13,7 @@ nav.module-tabs a:hover{background:#fff5e9;color:#ac4f2e}nav.module-tabs a:first
 nav.module-tabs a::before{content:"";width:7px;height:7px;border:2px solid currentColor;border-radius:3px;opacity:.55}
 .card,.toolbar{background:linear-gradient(180deg,rgba(255,255,255,.995),rgba(255,251,246,.99));border:1px solid var(--line);border-radius:16px;box-shadow:var(--shadow)}
 .filters-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding-bottom:10px;margin-bottom:11px;border-bottom:1px solid #eee2d4;font-weight:800;color:#29394b;font-size:13px}
-.toolbar.filters-panel{padding:15px 17px 17px;margin:0 0 17px;display:grid;grid-template-columns:minmax(200px,1.6fr) repeat(3,minmax(145px,1fr)) minmax(170px,1.1fr) auto;gap:10px;align-items:end}
+.toolbar.filters-panel{padding:15px 17px 17px;margin:0 0 17px;display:grid;grid-template-columns:minmax(220px,1.6fr) repeat(3,minmax(145px,1fr)) auto;gap:10px;align-items:end}
 .filters-head{grid-column:1/-1}.field{min-width:0!important;display:flex;flex-direction:column;gap:5px}.field label{color:#6a788b;font-size:11px;font-weight:600}
 .field input,.field select{display:block;width:100%;min-height:41px;background:#fffefa;color:var(--text);border:1px solid #dfd2c2;border-radius:10px;padding:9px 11px;font-size:12px;outline:none;box-shadow:inset 0 1px 0 rgba(255,255,255,.7)}
 .field input:focus,.field select:focus{border-color:#e7a06d;box-shadow:0 0 0 3px rgba(233,120,43,.12)}

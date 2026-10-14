@@ -1,0 +1,31 @@
+
+/* SUO Education Spatial Intelligence — consistent with safety-dashboard warm palette */
+.analysis-panel{margin:16px 0;padding:18px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#fffdfa,#fffaf6);box-shadow:var(--shadow)}
+.analysis-head{display:flex;align-items:start;justify-content:space-between;gap:18px;margin-bottom:15px}
+.analysis-head h2{font-size:17px;font-weight:800;margin:0 0 6px;color:#27374b}
+.analysis-head p{margin:0;color:#7c8798;font-size:11px;line-height:1.6;max-width:740px}
+.analysis-flag{color:#b85832;background:#fff2e3;padding:8px 11px;border-radius:9px;font-weight:800;font-size:10px;white-space:nowrap}
+.analysis-tabs{display:flex;gap:8px;margin-bottom:15px;border-bottom:1px solid #eadfd2;padding-bottom:10px}
+.analysis-tabs button{background:transparent;box-shadow:none;border:1px solid transparent;color:#69798b;font-size:12px;font-weight:700;padding:10px 13px;border-radius:9px}
+.analysis-tabs button.active{background:#fff1e3;border-color:#edcdb6;color:#c35733}
+.analysis-workspace{display:grid;grid-template-columns:minmax(235px,290px) minmax(0,1fr) minmax(220px,265px);gap:13px;min-height:500px}
+.analysis-controls,.analysis-output{border:1px solid #ecdfd2;border-radius:13px;background:#fffdfb;padding:14px;min-width:0}
+.analysis-controls h3,.analysis-output h3{font-size:13px;color:#28384b;margin:0 0 14px;font-weight:800}
+.analysis-controls label{display:block;font-size:11px;color:#69788a;margin:12px 0;font-weight:700}
+.analysis-controls select{display:block;width:100%;margin-top:6px;background:#fffefa;color:#26374b;padding:11px;border:1px solid #dfd2c2;border-radius:9px;font-size:11px;min-width:0}
+.analysis-controls .secondary{width:100%;margin-top:12px}
+.analysis-info{margin:14px 0 0;background:#fff7ec;padding:11px;border:1px solid #f0dec9;border-radius:9px;color:#886548;font-size:11px;line-height:1.65}
+.analysis-tally{margin-top:14px;padding:12px;border-radius:10px;background:#f9f5f0;display:grid;gap:8px;color:#69788a;font-size:11px}
+.analysis-tally div{display:flex;justify-content:space-between}.analysis-tally strong{color:#26374b}
+.analysis-map-shell{border:1px solid #e7dacd;border-radius:12px;overflow:hidden;min-height:500px;position:relative}
+#analysisMap{height:100%;min-height:500px;width:100%;background:#ecf2ef;z-index:1}
+#analysisMap.nearest-cursor{cursor:crosshair!important}
+#analysisMap .leaflet-interactive:focus:not(:focus-visible){outline:none!important}
+.analysis-result{display:flex;flex-direction:column;gap:7px;padding:11px 10px;margin:8px 0;background:#fff9f2;border:1px solid #eddfd0;border-radius:10px;text-align:left;width:100%;color:#38485c;box-shadow:none;line-height:1.45;font-size:11px}
+.analysis-result strong{font-size:12px;color:#253649;font-weight:800}.analysis-result span{font-size:10px;color:#788697}.analysis-result b{font-size:12px;color:#c85c35}
+button.analysis-pick{cursor:pointer}button.analysis-pick:hover{background:#fff1e2;border-color:#d9a984;transform:none}
+.analysis-output{overflow-y:auto;max-height:500px}
+.analysis-caveat{margin-top:14px;font-size:10px;color:#8795a4;line-height:1.7}
+[hidden]{display:none!important}
+@media(max-width:1250px){.analysis-workspace{grid-template-columns:minmax(230px,280px) minmax(0,1fr)}.analysis-output{grid-column:1/-1;max-height:none}.analysis-map-shell,#analysisMap{min-height:440px}}
+@media(max-width:750px){.analysis-head{flex-direction:column}.analysis-workspace{grid-template-columns:1fr}.analysis-map-shell,#analysisMap{min-height:400px}.analysis-tabs{flex-wrap:wrap}.analysis-output{grid-column:auto}}

@@ -70,3 +70,13 @@ https://faeiruzrusman.github.io/Dashboard-Kemudahan-Pendidikan-Selangor/
 - **9/9 daerah** selesai dari segi ketersediaan geometri sekolah JAIS; **0 rekod tanpa koordinat**.
 - Lima lokasi terakhir Kuala Selangor ditambah berdasarkan koordinat dibekalkan pengguna. Rujuk `data/SEMAKAN-KOORDINAT-JAIS.md`.
 - Nota: analisis Coverage / Nearest boleh menggunakan semua titik, namun sebahagian geometri asal JAIS berstatus belum disahkan ketepatan di lapangan. Statistik bersejarah dalam README ini ialah snapshot sebelum pemulihan dan deduplikasi.
+
+## Accessibility & Travel Time — Fasa 1 (14 Oktober 2026)
+- Tab keempat `Accessibility & Travel Time` dalam workspace **kawalan kiri, peta tengah, keputusan kanan**, tanpa peta bawah tambahan.
+- Mod **driving** menggunakan endpoint OSRM demo awam `https://router.project-osrm.org/route/v1/driving/{lon,lat};{lon,lat}?overview=full&geometries=geojson&steps=false&alternatives=false` (lihat [OSRM HTTP API](https://project-osrm.org/docs/v26.5.0/http)).
+- Aliran: buka tab → klik titik asal atas peta tengah → pilih sekolah daripada senarai berdasarkan penapis semasa (atau pilih sekolah paling hampir secara **garis lurus**) → tekan **Kira laluan memandu** → papar garis laluan, **jarak km melalui jalan** dan **anggaran minit**.
+- **PENTING:** butang “sekolah terdekat” menilai **jarak garis lurus** untuk memilih destinasi, bukan membuat perbandingan semua sekolah menurut masa perjalanan. Hanya satu laluan dipanggil setiap kali; tiada dakwaan bahawa sekolah yang dipilih semestinya paling cepat dicapai.
+- Anggaran OSRM berdasarkan profil rangkaian jalan dan kelajuan routing, **tanpa trafik langsung**. Posisi mula/tamat disnap ke jalan berhampiran; amaran diberikan sekiranya snapping melebihi 100 meter.
+- API demo OSRM disediakan **best effort untuk prototaip/ujian**, bukan servis berjaminan; pembekal boleh mengehadkan atau menarik akses. Elakkan penggunaan skala besar/produksi. Had klien: satu permintaan pada satu-satu masa dan sekurang-kurangnya 1.25 saat antara permintaan; timeout 16 saat. Untuk penggunaan rasmi, konfigurasikan routing backend/OSRM sendiri dengan ketersediaan dan polisi akses yang sesuai.
+- **Tiada API key disimpan dalam JavaScript / frontend.** Modul `education-routing.js` menggunakan endpoint demo tanpa kunci sahaja.
+- Apabila menukar tab atau menukar penapis, permintaan yang sedang berjalan dibatalkan; analisis lama tidak dipaparkan sebagai keputusan baharu.

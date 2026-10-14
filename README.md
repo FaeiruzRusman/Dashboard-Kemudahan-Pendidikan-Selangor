@@ -38,3 +38,11 @@ https://faeiruzrusman.github.io/Dashboard-Kemudahan-Pendidikan-Selangor/
 - Jumlah selepas deduplikasi ialah **1,198 rekod unik**: 664 sekolah rendah, 266 sekolah menengah dan 268 sekolah agama.
 - Fail JAIS GeoJSON ini mengekalkan nama, daerah, subkategori, status lokasi dan nombor rekod; **alamat terperinci serta medan lain dalam Shapefile asal belum disalin**. Rujuk ZIP asal untuk metadata penuh.
 - Penapis PBT bagi rekod JAIS berkoordinat ditentukan melalui titik-dalam-poligon. Untuk rekod tanpa koordinat dan tanpa kod PBT sumber, PBT tidak dapat ditentukan dengan pasti; penapisan daerah kekal tersedia.
+
+## Education Spatial Intelligence — Coverage & Nearest School (Oktober 2026)
+- Dua modul tersedia pada halaman yang sama melalui tab **School Coverage Analysis** dan **Nearest School Analysis**, dengan peta Leaflet analisis berasingan.
+- Coverage: buffer bulatan geodesik berjejari **500 m, 1 km, 3 km atau 5 km**, untuk satu sekolah pilihan atau semua sekolah yang memenuhi penapis. **Ini bukan service area rangkaian jalan**.
+- Nearest: klik lokasi rujukan atas peta analisis untuk mendapatkan **lima sekolah paling hampir berdasarkan jarak geodesik**. Garisan putus-putus menggambarkan jarak garis lurus, **bukan laluan memandu**.
+- Kedua-duanya mematuhi penapis utama Daerah, PBT, Jenis Sekolah, Kategori Sekolah dan carian nama/alamat.
+- Daripada **1,198 rekod unik**, **1,042** mempunyai titik koordinat yang memenuhi julat validasi asas, dan **156** tidak mempunyai titik yang boleh digunakan. Ini tidak bermakna semua 1,042 lokasi telah diaudit ketepatannya di lapangan.
+- Kod: `education-analysis.js` dan `education-analysis.css`; menggunakan Leaflet dan OpenStreetMap tanpa API routing berbayar.

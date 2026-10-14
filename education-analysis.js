@@ -73,6 +73,20 @@ function renderNearest(){
  msg('5 sekolah terdekat daripada '+sites.length+' lokasi yang berkoordinat. Jarak geodesik (garis lurus), bukan jarak memandu.');
  const bounds=L.latLngBounds([[origin.lat,origin.lon],...ranked.map(x=>[x.school.lat,x.school.lon])]);if(bounds.isValid())analysisMap.fitBounds(bounds.pad(.18),{maxZoom:13});
 }
+function centerAnalysisMap(){
+ analysisMap.invalidateSize({pan:false});
+ const sites=relevant();
+ if(activeMode==='nearest'&&origin){return;}
+ if(activeMode==='coverage'&&chosenKey){
+  const selected=sites.find(r=>siteKey(r)===chosenKey);
+  if(selected){analysisMap.setView([selected.lat,selected.lon],Number($('coverageRadius').value)<=1000?13:11,{animate:false});return;}
+ }
+ if(sites.length){
+  const bounds=L.latLngBounds(sites.map(r=>[r.lat,r.lon]));
+  if(bounds.isValid()){analysisMap.fitBounds(bounds,{padding:[35,35],maxZoom:10,animate:false});return;}
+ }
+ analysisMap.setView([3.18,101.55],9,{animate:false});
+}
 function render(){drawPoints();fillSchoolDropdown();if(activeMode==='coverage'){renderCoverage()}else{renderNearest()}}
 function switchMode(mode){
  activeMode=mode;
@@ -88,6 +102,6 @@ $('coverageSchool').addEventListener('change',e=>{chosenKey=e.target.value;rende
 $('coverageRadius').addEventListener('change',renderCoverage);
 $('clearAnalysis').addEventListener('click',()=>{origin=null;chosenKey='';$('coverageSchool').value='';selectionLayer.clearLayers();geomLayer.clearLayers();$('analysisResults').innerHTML='';if(activeMode==='coverage')renderCoverage();else renderNearest()});
 document.querySelectorAll('[data-analysis-mode]').forEach(btn=>btn.addEventListener('click',()=>switchMode(btn.dataset.analysisMode)));
-window.updateEducationAnalysis=()=>{render()};window.setEducationAnalysisMode=switchMode;window.educationAnalysisMap=analysisMap;
+window.updateEducationAnalysis=()=>{render();if(!$('analysisMap').hidden)centerAnalysisMap()};window.setEducationAnalysisMode=switchMode;window.educationAnalysisMap=analysisMap;window.centerEducationAnalysisMap=centerAnalysisMap;
 render();switchMode('coverage');
 })();

@@ -62,3 +62,10 @@ nav.module-tabs.section-links a:hover::after{background:#de7a43}
    Preserve keyboard navigation with a visible highlight only for keyboard focus. */
 .leaflet-overlay-pane svg path.leaflet-interactive:focus:not(:focus-visible){outline:none!important}
 .leaflet-overlay-pane svg path.leaflet-interactive:focus-visible{outline:2px solid #c94d32;outline-offset:2px}
+
+/* v1.5 — paired hierarchical education filters */
+.toolbar.filters-panel{grid-template-columns:minmax(185px,1.4fr) repeat(4,minmax(132px,1fr)) auto}
+.filters-panel .field select:disabled{background:#f2eee9;color:#9097a2;cursor:not-allowed;opacity:.85}
+@media(max-width:1340px){.toolbar.filters-panel{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){.toolbar.filters-panel{grid-template-columns:1fr 1fr}}
+@media(max-width:440px){.toolbar.filters-panel{grid-template-columns:1fr}}

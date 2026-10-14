@@ -64,3 +64,9 @@ https://faeiruzrusman.github.io/Dashboard-Kemudahan-Pendidikan-Selangor/
 - Dataset operasi dashboard sekarang mempunyai **267 sekolah JAIS unik**: **262 berkoordinat** dan **5 tanpa geometri sah** (semuanya dalam Kuala Selangor).
 - **Kuala Langat lengkap**: 28 sekolah JAIS unik berkoordinat; rekod SRA lama diintegrasi sebagai atribut sejarah pada rekod SRAI, bukan titik pendua.
 - Oleh itu bilangan keseluruhan sekolah unik dashboard akan turun satu rekod (daripada **1,198 kepada 1,197**) berbanding angka sebelum penggabungan, tertakluk logik deduplikasi GeoPortal sedia ada. Bilangan terdahulu dalam dokumen ini ialah snapshot asal.
+
+## Penutupan pemetaan koordinat JAIS — 14 Oktober 2026
+- **267/267 sekolah JAIS unik mempunyai geometri Point WGS84**, selepas gabungan rekod SRA Sungai Manggis ke SRAI Sungai Manggis.
+- **9/9 daerah** selesai dari segi ketersediaan geometri sekolah JAIS; **0 rekod tanpa koordinat**.
+- Lima lokasi terakhir Kuala Selangor ditambah berdasarkan koordinat dibekalkan pengguna. Rujuk `data/SEMAKAN-KOORDINAT-JAIS.md`.
+- Nota: analisis Coverage / Nearest boleh menggunakan semua titik, namun sebahagian geometri asal JAIS berstatus belum disahkan ketepatan di lapangan. Statistik bersejarah dalam README ini ialah snapshot sebelum pemulihan dan deduplikasi.

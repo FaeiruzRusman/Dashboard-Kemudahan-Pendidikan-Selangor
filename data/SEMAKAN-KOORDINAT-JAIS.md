@@ -55,3 +55,8 @@ Petaling → Klang → Gombak → Hulu Langat → Sepang → Kuala Langat → Ku
 ## Batch Hulu Selangor selesai — 14 Oktober 2026
 - **SRA Kampung Soeharto** — latitude **3.682696321871662**, longitude **101.38981706763454**, disahkan pengguna pada 14 Oktober 2026; GeoJSON [101.38981706763454, 3.682696321871662].
 - **Hulu Selangor lengkap: 22/22 rekod JAIS mempunyai titik.** Jumlah negeri: **262/268 bertitik**, **6 baki** (Kuala Selangor 5; Kuala Langat 1). Kiraan terdahulu adalah snapshot sebelum pengesahan ini.
+
+## Semakan SRAI Sungai Manggis — 14 Oktober 2026
+- **SRAI Sungai Manggis**, Kuala Langat (`jais_record_number=196`, kategori `SRAI`): pengguna mengesahkan latitude **2.829876058926946**, longitude **101.53530537794174**. Geometri asal [101.53583, 2.83072] diganti dengan lokasi disahkan; koordinat asal disimpan dalam atribut `coordinate_previous_original`.
+- **PERHATIAN: SRA Sungai Manggis** (`jais_record_number=174`, kategori `SRA`) **ialah rekod berlainan** dan masih tanpa koordinat. Jangan salin koordinat SRAI kepada SRA tanpa bukti bahawa lokasi keduanya sama.
+- Jumlah negeri kekal **262/268 titik**, **6 rekod belum bertitik**. Kuala Langat belum boleh ditutup kerana SRA Sungai Manggis masih perlu disahkan.

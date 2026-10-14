@@ -29,8 +29,10 @@ function drawPoints(){
    L.DomEvent.stopPropagation(e);
    if(activeMode==='coverage'){
     chosenKey=siteKey(r);$('coverageSchool').value=chosenKey;renderCoverage();
-   }else{
+   }else if(activeMode==='nearest'){
     origin={lat:r.lat,lon:r.lon};renderNearest();
+   }else if(activeMode==='routing'){
+    window.educationRouting?.selectSchool(r);
    }
   });
   marker.addTo(pointLayer);
@@ -77,6 +79,7 @@ function centerAnalysisMap(){
  analysisMap.invalidateSize({pan:false});
  const sites=relevant();
  if(activeMode==='nearest'&&origin){return;}
+ if(activeMode==='routing'&&window.educationRouting?.hasOrigin())return;
  if(activeMode==='coverage'&&chosenKey){
   const selected=sites.find(r=>siteKey(r)===chosenKey);
   if(selected){analysisMap.setView([selected.lat,selected.lon],Number($('coverageRadius').value)<=1000?13:11,{animate:false});return;}
@@ -87,21 +90,21 @@ function centerAnalysisMap(){
  }
  analysisMap.setView([3.18,101.55],9,{animate:false});
 }
-function render(){drawPoints();fillSchoolDropdown();if(activeMode==='coverage'){renderCoverage()}else{renderNearest()}}
+function render(){drawPoints();fillSchoolDropdown();if(activeMode==='coverage')renderCoverage();else if(activeMode==='nearest')renderNearest();else if(activeMode==='routing')window.educationRouting?.refresh()}
 function switchMode(mode){
  activeMode=mode;
  document.querySelectorAll('[data-analysis-mode]').forEach(btn=>{const on=btn.dataset.analysisMode===mode;btn.classList.toggle('active',on);btn.setAttribute('aria-pressed',String(on))});
  $('coverageControls').hidden=mode!=='coverage';$('nearestControls').hidden=mode!=='nearest';
  $('analysisResults').innerHTML='';geomLayer.clearLayers();selectionLayer.clearLayers();
  $('analysisMap').classList.toggle('nearest-cursor',mode==='nearest');
- if(mode==='coverage')renderCoverage();else renderNearest();
+ if(mode==='coverage')renderCoverage();else if(mode==='nearest')renderNearest();
  setTimeout(()=>analysisMap.invalidateSize(),50);
 }
-analysisMap.on('click',e=>{if(activeMode==='nearest'){origin={lat:e.latlng.lat,lon:e.latlng.lng};renderNearest()}});
+analysisMap.on('click',e=>{if(activeMode==='nearest'){origin={lat:e.latlng.lat,lon:e.latlng.lng};renderNearest()}else if(activeMode==='routing'){window.educationRouting?.setOrigin(e.latlng)}});
 $('coverageSchool').addEventListener('change',e=>{chosenKey=e.target.value;renderCoverage()});
 $('coverageRadius').addEventListener('change',renderCoverage);
 $('clearAnalysis').addEventListener('click',()=>{origin=null;chosenKey='';$('coverageSchool').value='';selectionLayer.clearLayers();geomLayer.clearLayers();$('analysisResults').innerHTML='';if(activeMode==='coverage')renderCoverage();else renderNearest()});
 document.querySelectorAll('[data-analysis-mode]').forEach(btn=>btn.addEventListener('click',()=>switchMode(btn.dataset.analysisMode)));
-window.updateEducationAnalysis=()=>{render();if(!$('analysisMap').hidden)centerAnalysisMap()};window.setEducationAnalysisMode=switchMode;window.educationAnalysisMap=analysisMap;window.centerEducationAnalysisMap=centerAnalysisMap;
+window.getEducationFilteredSchools=relevant;window.updateEducationAnalysis=()=>{render();if(!$('analysisMap').hidden)centerAnalysisMap()};window.setEducationAnalysisMode=switchMode;window.educationAnalysisMap=analysisMap;window.centerEducationAnalysisMap=centerAnalysisMap;
 render();switchMode('coverage');
 })();

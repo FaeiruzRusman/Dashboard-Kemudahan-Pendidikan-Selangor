@@ -5,7 +5,7 @@ Tarikh kemas kini: 14 Oktober 2026. Koordinat GeoJSON disimpan dalam susunan **[
 ## Batch 1 — Petaling
 
 - **SRA Taman Datuk Harun** — 3.082630, 101.635850 — padanan sekolah OSM way 482083890, https://mapcarta.com/W482083890 ; Waze turut memadankan sekolah di Jalan 9. **Dimasukkan**.
-- **SRA Bukit Cherakah** — alamat Kampung Bukit Cherakah Jaya, Seksyen U15; rekod sekolah wujud dalam dokumen negeri, tetapi koordinat khusus belum disahkan. JANGAN gunakan titik KAFA FELDA Bukit Cherakah kerana berkemungkinan sekolah lain. **Tangguh**.
+- **SRA Bukit Cherakah** — **3.1751759020289443, 101.45482335450616** (latitude, longitude). Koordinat diberikan dan disahkan oleh pengguna pada 14 Oktober 2026. **Dimasukkan ke GeoJSON**. Semakan Daerah Petaling lengkap: 31/31 rekod JAIS mempunyai koordinat.
 
 ## Batch 2 — Klang
 

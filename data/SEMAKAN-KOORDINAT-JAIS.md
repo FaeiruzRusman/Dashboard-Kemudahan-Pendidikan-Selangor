@@ -1,3 +1,13 @@
+> **AUDIT SEMULA SHAPEFILE ASAL — 14 Oktober 2026**
+>
+> Selepas membaca geometri sebenar fail `Sekolah Agama Negeri Selangor_JAIS.zip` (EPSG:3380), kesimpulan lama berasaskan `HAS_GEOM=TIDAK` telah diperbetulkan. **Semua 268 rekod adalah objek Point dalam fail SHP, tetapi 10 mempunyai koordinat sentinel tidak sah** dan tidak boleh digunakan; **258 mempunyai koordinat dalam julat Selangor** selepas transformasi WGS84.
+>
+> Sebanyak **138 titik yang pernah dibuang ketika integrasi awal telah dipulihkan** dengan padanan **nama sekolah + daerah**. **8 titik yang telah dikemas kini melalui pengesahan/carian kemudian dikekalkan**, tidak ditimpa oleh geometri asal. Status geometri `HAS_GEOM=TIDAK` tidak semestinya bermaksud tiada titik; bagi 146 rekod berkaitan, ia menunjukkan status semakan lokasi belum disahkan. Geometri bukan jaminan ketepatan sekolah di lapangan.
+>
+> **Klang sekarang 32/33 rekod bertitik; hanya SRA Hajjah Fatimah tanpa titik.** Jangan bergantung pada senarai “belum ditemui” di bawah sebagai status ketiadaan titik—ia ialah catatan penyelidikan sebelum audit geometri.
+>
+> **10 baki bergeometri tidak sah:** SRA Sungai Buloh, SRA Sungai Sembilang, SRA Jeram Batu 20, SRA Batu 4 Tanjong Karang, SRA Ujung Permatang (Kuala Selangor); SRA Kampung Soeharto (Hulu Selangor); SRA Taman Ehsan dan SRA Sungai Chinchin (Gombak); SRA Hajjah Fatimah (Klang); SRA Sungai Manggis (Kuala Langat).
+
 # Semakan Koordinat Sekolah Agama JAIS — Mengikut Daerah
 
 Tarikh kemas kini: 14 Oktober 2026. Koordinat GeoJSON disimpan dalam susunan **[longitude, latitude]** EPSG:4326. Padanan awam belum semestinya pengesahan lapangan.

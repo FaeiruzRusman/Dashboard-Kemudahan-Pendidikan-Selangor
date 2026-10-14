@@ -22,3 +22,10 @@ Alamat selepas GitHub Pages diaktifkan:
 https://faeiruzrusman.github.io/Dashboard-Kemudahan-Pendidikan-Selangor/
 
 © PLANMalaysia Selangor | SUO
+
+## Sempadan dan query pentadbiran
+- Layer **Sempadan Daerah** diambil daripada fail asal `selangor-3d-map/data/pentadbiran/sempadan_daerah_selangor.geojson` melalui raw GitHub.
+- Layer **Sempadan PBT 2024** disalin daripada GeoPortal ke `data/sempadan_pbt_selangor_2024.geojson` (12 PBT).
+- Pilih Daerah dan/atau PBT untuk menapis rekod sekolah dan mengemas kini KPI, graf serta direktori.
+- Klik poligon dalam peta untuk menapis kawasan, atau gunakan butang **Zum kawasan dipilih**.
+- Padanan PBT mengutamakan semakan titik-dalam-poligon; jika di luar kawasan, kod PBT asal digunakan sebagai fallback. Keputusan tertakluk kepada ketepatan koordinat dan sempadan.

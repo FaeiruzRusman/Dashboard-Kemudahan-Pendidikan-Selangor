@@ -29,6 +29,8 @@ function show(mode){
   requestAnimationFrame(()=>{
    if(window.educationAnalysisMap)window.educationAnalysisMap.invalidateSize({pan:false});
    if(typeof window.updateEducationAnalysis==='function')window.updateEducationAnalysis();
+   if(typeof window.centerEducationAnalysisMap==='function')window.centerEducationAnalysisMap();
+   setTimeout(()=>{if(current===mode&&typeof window.centerEducationAnalysisMap==='function')window.centerEducationAnalysisMap()},120);
   });
  }
 }

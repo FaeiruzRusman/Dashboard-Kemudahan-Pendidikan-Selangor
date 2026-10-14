@@ -67,3 +67,16 @@ Petaling → Klang → Gombak → Hulu Langat → Sepang → Kuala Langat → Ku
 - Koordinat SRAI yang disahkan pengguna dikekalkan: **2.829876058926946, 101.53530537794174** (lat, lon).
 - **Kuala Langat lengkap: 28/28 sekolah JAIS unik bertitik** selepas deduplikasi (sumber asal 29 rekod termasuk satu rekod lama).
 - **Negeri: 267 sekolah JAIS unik, 262 mempunyai koordinat, 5 masih tiada koordinat** (semuanya di Kuala Selangor). Jumlah asal fail sumber kekal 268 rekod. Semua bilangan terdahulu yang menyebut 268 sekolah unik atau 6 baki adalah status sebelum deduplikasi.
+
+## Batch Kuala Selangor selesai — 14 Oktober 2026
+Semua koordinat berikut diberikan dan disahkan pengguna, dalam format latitude, longitude. Disimpan dalam GeoJSON format longitude, latitude (EPSG:4326):
+
+| Sekolah | Latitude | Longitude |
+|---|---:|---:|
+| SRA Sungai Buloh | 3.2565813140479367 | 101.30681649436802 |
+| SRA Sungai Sembilang | 3.204858169308371 | 101.31481501201849 |
+| SRA Jeram Batu 20 | 3.243298242057795 | 101.31498360783574 |
+| SRA Batu 4 Tanjong Karang | 3.3887328967231105 | 101.22363159354195 |
+| SRA Ujung Permatang | 3.383000916309723 | 101.24991709123967 |
+
+**Kuala Selangor selesai: 36/36 rekod bertitik. Semua daerah selesai dari segi ketersediaan geometri. JAIS selepas deduplikasi: 267 sekolah unik / 267 koordinat / 0 tiada geometri.** Ketersediaan koordinat tidak bermaksud keseluruhan titik sudah diaudit ketepatannya di lapangan.

@@ -39,3 +39,9 @@ Tarikh kemas kini: 14 Oktober 2026. Koordinat GeoJSON disimpan dalam susunan **[
 
 ## Susunan batch
 Petaling → Klang → Gombak → Hulu Langat → Sepang → Kuala Langat → Kuala Selangor → Hulu Selangor → Sabak Bernam.
+
+## Pengesahan tambahan — 14 Oktober 2026
+- **SRA Hajjah Fatimah (Klang)** — latitude **3.036052983124771**, longitude **101.46882336821469**; disahkan oleh pengguna dan dimasukkan sebagai titik WGS84.
+- **Batch Klang lengkap: 33/33 sekolah JAIS bertitik.** Petaling kekal lengkap 31/31.
+- **Status negeri selepas kemas kini:** 259 daripada 268 sekolah JAIS mempunyai koordinat; baki **9** tanpa geometri sah. Rekod tanpa titik: SRA Sungai Buloh, SRA Sungai Sembilang, SRA Jeram Batu 20, SRA Batu 4 Tanjong Karang, SRA Ujung Permatang (Kuala Selangor); SRA Kampung Soeharto (Hulu Selangor); SRA Taman Ehsan dan SRA Sungai Chinchin (Gombak); SRA Sungai Manggis (Kuala Langat).
+- Nota: angka dan senarai dalam bahagian audit awal di atas merupakan **snapshot sebelum pengesahan SRA Hajjah Fatimah**.

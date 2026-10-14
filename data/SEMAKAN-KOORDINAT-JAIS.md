@@ -60,3 +60,10 @@ Petaling → Klang → Gombak → Hulu Langat → Sepang → Kuala Langat → Ku
 - **SRAI Sungai Manggis**, Kuala Langat (`jais_record_number=196`, kategori `SRAI`): pengguna mengesahkan latitude **2.829876058926946**, longitude **101.53530537794174**. Geometri asal [101.53583, 2.83072] diganti dengan lokasi disahkan; koordinat asal disimpan dalam atribut `coordinate_previous_original`.
 - **PERHATIAN: SRA Sungai Manggis** (`jais_record_number=174`, kategori `SRA`) **ialah rekod berlainan** dan masih tanpa koordinat. Jangan salin koordinat SRAI kepada SRA tanpa bukti bahawa lokasi keduanya sama.
 - Jumlah negeri kekal **262/268 titik**, **6 rekod belum bertitik**. Kuala Langat belum boleh ditutup kerana SRA Sungai Manggis masih perlu disahkan.
+
+## Rekod pendua akibat naik taraf sekolah — 14 Oktober 2026
+- Pengguna mengesahkan **SRA Sungai Manggis (rekod lama JAIS #174)** dan **SRAI Sungai Manggis (rekod JAIS #196)** ialah **sekolah yang sama**, yang telah dinaik taraf daripada SRA kepada SRAI.
+- Rekod SRA lama **digabung/dikeluarkan daripada GeoJSON dashboard**, dan maklumat nama/kategori/nombor rekod asal dikekalkan dalam atribut sejarah rekod **SRAI Sungai Manggis**.
+- Koordinat SRAI yang disahkan pengguna dikekalkan: **2.829876058926946, 101.53530537794174** (lat, lon).
+- **Kuala Langat lengkap: 28/28 sekolah JAIS unik bertitik** selepas deduplikasi (sumber asal 29 rekod termasuk satu rekod lama).
+- **Negeri: 267 sekolah JAIS unik, 262 mempunyai koordinat, 5 masih tiada koordinat** (semuanya di Kuala Selangor). Jumlah asal fail sumber kekal 268 rekod. Semua bilangan terdahulu yang menyebut 268 sekolah unik atau 6 baki adalah status sebelum deduplikasi.

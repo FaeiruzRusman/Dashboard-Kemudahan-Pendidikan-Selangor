@@ -33,7 +33,7 @@ https://faeiruzrusman.github.io/Dashboard-Kemudahan-Pendidikan-Selangor/
 ## Integrasi Sekolah Agama JAIS (14 Oktober 2026)
 - Sumber: fail pengguna `Sekolah Agama Negeri Selangor_JAIS.zip` (Shapefile, EPSG:3380) dan ditukar ke GeoJSON WGS84 untuk pemaparan web.
 - Fail dataset: `data/sekolah_agama_jais_selangor.geojson` — **268** rekod JAIS: 229 SRA, 11 SRAI, 23 SAM/SAMT dan 5 MITS.
-- **112** rekod ditandakan `HAS_GEOM=YA` dan mempunyai lokasi dalam shapefile; **156** ditandakan `HAS_GEOM=TIDAK` dan sengaja disimpan dengan `geometry:null`, walaupun sesetengahnya mengandungi geometri placeholder.
+- **Audit diperbetulkan (14 Okt 2026):** semua 268 rekod adalah geometri Point di SHP, tetapi **258 mempunyai koordinat yang boleh ditukar kepada WGS84 dalam julat Selangor** dan **10 memegang sentinel tidak sah**. Kolum `HAS_GEOM=YA` (112) / `TIDAK` (156) menunjukkan status pemadanan, bukan semestinya kewujudan titik. 146 daripada 156 bertanda `TIDAK` mempunyai koordinat geometri, tetapi belum semestinya disahkan ketepatan lokasi.
 - Perbandingan nama sekolah yang dinormalkan bersama daerah menemui **15 pertindihan** dengan dataset GeoPortal SUO. Rekod JAIS diutamakan supaya tidak dikira dua kali.
 - Jumlah selepas deduplikasi ialah **1,198 rekod unik**: 664 sekolah rendah, 266 sekolah menengah dan 268 sekolah agama.
 - Fail JAIS GeoJSON ini mengekalkan nama, daerah, subkategori, status lokasi dan nombor rekod; **alamat terperinci serta medan lain dalam Shapefile asal belum disalin**. Rujuk ZIP asal untuk metadata penuh.
@@ -44,7 +44,7 @@ https://faeiruzrusman.github.io/Dashboard-Kemudahan-Pendidikan-Selangor/
 - Coverage: buffer bulatan geodesik berjejari **500 m, 1 km, 3 km atau 5 km**, untuk satu sekolah pilihan atau semua sekolah yang memenuhi penapis. **Ini bukan service area rangkaian jalan**.
 - Nearest: klik lokasi rujukan atas peta analisis untuk mendapatkan **lima sekolah paling hampir berdasarkan jarak geodesik**. Garisan putus-putus menggambarkan jarak garis lurus, **bukan laluan memandu**.
 - Kedua-duanya mematuhi penapis utama Daerah, PBT, Jenis Sekolah, Kategori Sekolah dan carian nama/alamat.
-- Daripada **1,198 rekod unik**, **1,042** mempunyai titik koordinat yang memenuhi julat validasi asas, dan **156** tidak mempunyai titik yang boleh digunakan. Ini tidak bermakna semua 1,042 lokasi telah diaudit ketepatannya di lapangan.
+- Daripada **1,198 rekod unik**, selepas pemulihan shapefile **1,188** mempunyai koordinat yang boleh digunakan dan **10** JAIS tiada koordinat sah. Ini bukan pengesahan bahawa semua 1,188 lokasi telah diaudit di lapangan.
 - Kod: `education-analysis.js` dan `education-analysis.css`; menggunakan Leaflet dan OpenStreetMap tanpa API routing berbayar.
 
 ## Unified Workspace UI (14 Oktober 2026)
@@ -53,3 +53,8 @@ https://faeiruzrusman.github.io/Dashboard-Kemudahan-Pendidikan-Selangor/
 - Dua peta Leaflet diuruskan oleh `education-mode.js` yang mengawal visibility dan `invalidateSize()` semasa pertukaran tab.
 - Stylesheet khusus: `education-workspace.css`. Enjin analisis kekal dalam `education-analysis.js`.
 - Data, pilihan kategori sekolah, penapis Daerah/PBT, direktori dan geometri asal tidak diubah oleh penstrukturan UI ini.
+
+## Audit koordinat JAIS asal (14 Oktober 2026)
+- Semak `data/SEMAKAN-KOORDINAT-JAIS.md` untuk 10 rekod tidak sah dan kaedah pemulihan titik asal.
+- 138 titik dari Shapefile asal dipulihkan menggunakan nama + daerah; 8 titik hasil semakan terkini dikekalkan; jumlah 258 JAIS bertitik dan 10 tidak sah.
+- Paparan Coverage/Nearest menggunakan semua titik yang kini tersedia, tetapi keputusan berkaitan 146 lokasi bertanda `HAS_GEOM=TIDAK` asal mestilah dianggap **indikatif** sehingga ketepatan lokasi disahkan.

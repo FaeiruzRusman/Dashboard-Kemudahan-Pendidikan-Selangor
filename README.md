@@ -46,3 +46,10 @@ https://faeiruzrusman.github.io/Dashboard-Kemudahan-Pendidikan-Selangor/
 - Kedua-duanya mematuhi penapis utama Daerah, PBT, Jenis Sekolah, Kategori Sekolah dan carian nama/alamat.
 - Daripada **1,198 rekod unik**, **1,042** mempunyai titik koordinat yang memenuhi julat validasi asas, dan **156** tidak mempunyai titik yang boleh digunakan. Ini tidak bermakna semua 1,042 lokasi telah diaudit ketepatannya di lapangan.
 - Kod: `education-analysis.js` dan `education-analysis.css`; menggunakan Leaflet dan OpenStreetMap tanpa API routing berbayar.
+
+## Unified Workspace UI (14 Oktober 2026)
+- Antara muka kini mengikut Dashboard Kemudahan Keselamatan SUO: KPI di atas, tiga tab **Overview / Coverage Analysis / Nearest School**, dan workspace **kawalan kiri – peta tengah – hasil analisis kanan**.
+- Overview menggunakan peta sedia ada, manakala Coverage dan Nearest berkongsi satu peta analisis dalam ruangan yang sama. Pengguna tidak perlu scroll ke peta kedua.
+- Dua peta Leaflet diuruskan oleh `education-mode.js` yang mengawal visibility dan `invalidateSize()` semasa pertukaran tab.
+- Stylesheet khusus: `education-workspace.css`. Enjin analisis kekal dalam `education-analysis.js`.
+- Data, pilihan kategori sekolah, penapis Daerah/PBT, direktori dan geometri asal tidak diubah oleh penstrukturan UI ini.

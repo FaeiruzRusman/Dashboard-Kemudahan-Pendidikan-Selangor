@@ -45,3 +45,9 @@ Petaling → Klang → Gombak → Hulu Langat → Sepang → Kuala Langat → Ku
 - **Batch Klang lengkap: 33/33 sekolah JAIS bertitik.** Petaling kekal lengkap 31/31.
 - **Status negeri selepas kemas kini:** 259 daripada 268 sekolah JAIS mempunyai koordinat; baki **9** tanpa geometri sah. Rekod tanpa titik: SRA Sungai Buloh, SRA Sungai Sembilang, SRA Jeram Batu 20, SRA Batu 4 Tanjong Karang, SRA Ujung Permatang (Kuala Selangor); SRA Kampung Soeharto (Hulu Selangor); SRA Taman Ehsan dan SRA Sungai Chinchin (Gombak); SRA Sungai Manggis (Kuala Langat).
 - Nota: angka dan senarai dalam bahagian audit awal di atas merupakan **snapshot sebelum pengesahan SRA Hajjah Fatimah**.
+
+## Batch Gombak selesai — 14 Oktober 2026
+- **SRA Taman Ehsan (Gombak)** — 3.220728016189946, 101.62209542838545 (lat, lon), disahkan oleh pengguna. Titik GeoJSON: [101.62209542838545, 3.220728016189946].
+- **SRA Sungai Chinchin (Gombak)** — 3.2470196924040646, 101.71519382325849 (lat, lon), disahkan oleh pengguna. Titik GeoJSON: [101.71519382325849, 3.2470196924040646].
+- **Gombak lengkap 17/17 rekod bertitik.** Jumlah JAIS semasa: **261/268** bertitik dan **7** belum berkoordinat.
+- Baki: Kuala Selangor (5), Hulu Selangor (1), Kuala Langat (1). Audit rekod bertanda `HAS_GEOM=TIDAK` masih diperlukan bagi ketepatan lokasi di lapangan.

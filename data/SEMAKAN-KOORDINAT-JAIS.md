@@ -51,3 +51,7 @@ Petaling → Klang → Gombak → Hulu Langat → Sepang → Kuala Langat → Ku
 - **SRA Sungai Chinchin (Gombak)** — 3.2470196924040646, 101.71519382325849 (lat, lon), disahkan oleh pengguna. Titik GeoJSON: [101.71519382325849, 3.2470196924040646].
 - **Gombak lengkap 17/17 rekod bertitik.** Jumlah JAIS semasa: **261/268** bertitik dan **7** belum berkoordinat.
 - Baki: Kuala Selangor (5), Hulu Selangor (1), Kuala Langat (1). Audit rekod bertanda `HAS_GEOM=TIDAK` masih diperlukan bagi ketepatan lokasi di lapangan.
+
+## Batch Hulu Selangor selesai — 14 Oktober 2026
+- **SRA Kampung Soeharto** — latitude **3.682696321871662**, longitude **101.38981706763454**, disahkan pengguna pada 14 Oktober 2026; GeoJSON [101.38981706763454, 3.682696321871662].
+- **Hulu Selangor lengkap: 22/22 rekod JAIS mempunyai titik.** Jumlah negeri: **262/268 bertitik**, **6 baki** (Kuala Selangor 5; Kuala Langat 1). Kiraan terdahulu adalah snapshot sebelum pengesahan ini.

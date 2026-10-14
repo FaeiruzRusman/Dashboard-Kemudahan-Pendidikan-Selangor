@@ -88,6 +88,6 @@ $('coverageSchool').addEventListener('change',e=>{chosenKey=e.target.value;rende
 $('coverageRadius').addEventListener('change',renderCoverage);
 $('clearAnalysis').addEventListener('click',()=>{origin=null;chosenKey='';$('coverageSchool').value='';selectionLayer.clearLayers();geomLayer.clearLayers();$('analysisResults').innerHTML='';if(activeMode==='coverage')renderCoverage();else renderNearest()});
 document.querySelectorAll('[data-analysis-mode]').forEach(btn=>btn.addEventListener('click',()=>switchMode(btn.dataset.analysisMode)));
-window.updateEducationAnalysis=()=>{render()};
+window.updateEducationAnalysis=()=>{render()};window.setEducationAnalysisMode=switchMode;window.educationAnalysisMap=analysisMap;
 render();switchMode('coverage');
 })();

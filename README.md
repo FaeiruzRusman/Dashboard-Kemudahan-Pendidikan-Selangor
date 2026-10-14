@@ -11,9 +11,9 @@ Dashboard tematik **Selangor Urban Observatory (SUO)** untuk PLANMalaysia Selang
 - Modul perancangan lanjutan (belum diaktifkan)
 
 ## Data
-Simpan GeoJSON sebenar di `data/sekolah_negeri_selangor.geojson`. Format: GeoJSON FeatureCollection, geometri Point WGS84 [longitude,latitude] serta atribut nama, jenis dan daerah. Pilihan sementara: muat naik GeoJSON/CSV melalui kawalan pada dashboard.
+GeoJSON sedia ada disimpan di `data/sekolah_negeri_selangor.geojson`. Format: GeoJSON FeatureCollection, geometri Point WGS84 [longitude,latitude] serta atribut nama, jenis dan daerah. Pilihan sementara: muat naik GeoJSON/CSV melalui kawalan pada dashboard.
 
-**Dataset sebenar belum dimasukkan, tiada angka rekaan.** Semak rekod dan metadata sumber sebelum diterbitkan sebagai statistik rasmi.
+**Dataset sudah dimasukkan:** 945 titik sekolah (664 sekolah rendah; 281 sekolah menengah) disalin daripada SUO 3D GeoPortal, fail `data/pendidikan/sekolah_negeri_selangor.geojson`. Dataset ini belum merangkumi semua sekolah agama/institusi lain; perlu semak tarikh, kelengkapan dan ketepatan sumber sebelum dianggap statistik rasmi.
 
 ## Terbitkan GitHub Pages
 Settings → Pages → Deploy from a branch → main / (root) → Save.
